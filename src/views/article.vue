@@ -1,10 +1,20 @@
 <template lang="pug">
 	.article-wrapper
-		h1 this is article page
+		h2 {{ item.title }}
+		p {{ item.content }}
+		.article-related
+			router-link(to="article")
+				ArticleBlock
+
 </template>
 
 <script>
+import ArticleBlock from '@/components/ArticleBlock.vue'
+
 export default {
-	name: 'article'
+	name: 'article',
+	components:{
+		ArticleBlock
+	}
 }
 </script>

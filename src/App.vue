@@ -1,19 +1,18 @@
 <template lang="pug">
   #app
-    #nav
-      router-link(to="/") Home
-      router-link(to="/articleList") List
-    router-view
+    Header
+    .container
+      router-view
 </template>
-
+<script>
+import Header from './components/Header';
+export default{
+  components:{
+    Header
+  }
+}
+</script>
 <style lang="scss">
 @import "variables.scss";
-#app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: $appColor;
-  margin-top: 60px;
-}
+
 </style>

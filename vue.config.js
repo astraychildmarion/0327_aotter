@@ -17,5 +17,12 @@ module.exports = {
         data: `@import "@/variables.scss";`
       }
     }
-  }		
+  },
+  configureWebpack: {
+    resolve: {
+      alias: {
+        'bootstrap-components': path.resolve(__dirname, 'node_modules/bootstrap-vue/es/components')
+      }
+    }
+  }
 }

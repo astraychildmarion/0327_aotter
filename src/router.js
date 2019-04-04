@@ -14,15 +14,12 @@ export default new Router({
     {
       path: '/articleList',
       name: 'articleList',
-      // route level code-splitting
-      // this generates a separate chunk (articleList.[hash].js) for this route
-      // which is lazy-loaded when the route is visited.
-      component: () => import(/* webpackChunkName: "articleList" */ './views/articleList.vue')
+      component: () => import('./views/articleList.vue')
     },
     {
-      path: '/article',
+      path: '/article/:index',
       name: 'article',
-      component: () => import(/* webpackChunkName: "articleList" */ './views/article.vue')
+      component: () => import('./views/article.vue')
     }
   ]
 })

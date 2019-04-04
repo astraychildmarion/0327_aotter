@@ -1,19 +1,22 @@
 <template lang="pug">
   .index-wrapper
-    IndexBanner
-    ArticleBlock(
+    IndexBanner()
+    router-link(
       v-for="item in article"
       key="index"
-      :imgAlt="item.imgAlt",
-      :title="item.title",
-      :subTitle="item.subTitle",
-      :imgSrc="item.imgSrc",
-      :author="item.author",
-      :publishData="item.publishData",
-      :catagory="item.catagory",
-      :content="item.content",
-      :index="item.index"
-    )
+      :to="{ name: 'article', params: { index: item.index }}"
+      ) 
+      ArticleBlock(
+        :imgAlt="item.imgAlt",
+        :title="item.title",
+        :subTitle="item.subTitle",
+        :imgSrc="item.imgSrc",
+        :author="item.author",
+        :publishData="item.publishData",
+        :catagory="item.catagory",
+        :content="item.content",
+        :index="item.index"
+      )
 </template>
 
 

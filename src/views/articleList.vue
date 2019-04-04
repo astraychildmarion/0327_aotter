@@ -2,7 +2,9 @@
   .articleList-wrapper
     b-list-group
       b-list-group-item(v-for="item in article" key="index")
-        router-link(to="article")
+        router-link(
+          :to="{ name: 'article', params: { index: item.index }}"
+          ) 
           ArticleBlock(
             :imgAlt="item.imgAlt",
             :title="item.title",

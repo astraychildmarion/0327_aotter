@@ -43,3 +43,4 @@ export default {
   margin: 1rem auto;
 }
 </style>
+ 

@@ -29,7 +29,7 @@ export default {
     },
     catagory: {
       type: String
-    },
+  },
     content:{
       type: String
     },

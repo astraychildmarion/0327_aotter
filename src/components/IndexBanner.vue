@@ -1,11 +1,7 @@
 <template lang="pug">
   swiper(:options="swiperOption")
-    router-link(
-      v-for="item in article"
-      key="index"
-      :to="{ name: 'article', params: { index: item.index }}"
-      ) 
-      swiperSlide
+    swiperSlide(v-for="item in article" key="index")
+      router-link(:to="{ name: 'article', params: { index: item.index }}") 
         img(:src="item.imgSrc")
 </template>
 <script>
@@ -19,10 +15,11 @@ export default {
     return {
       swiperOption: {
         noSwiping : false,
-        autoplay:true,
+        autoplay: true,
         crossFade: true,
         pagination: {
-          el: '.swiper-pagination'
+          el: '.swiper-pagination',
+          clickable: true,
         }
       }
     }
@@ -40,9 +37,14 @@ export default {
 </script>
 <style lang="scss">
 .swiper-wrapper{
+  position: relative;
   margin: 2rem auto;
   width: 100%;
   height: 400px;
+  img{
+    max-width: 100%;
+    height: auto;
+  }
 }
 </style>
 

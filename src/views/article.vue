@@ -1,12 +1,13 @@
 <template lang="pug">
 	.article-wrapper
 		h2 {{ article[$route.params.index].title }}
-		img(:src="article[$route.params.index].imgSrc")
 		h5 {{ article[$route.params.index].subTitle }}
+		img(:src="article[$route.params.index].imgSrc")
 		p {{ article[$route.params.index].content }}
 		.article-author
-			p {{ article[$route.params.index].author }}
+			p 作者 : {{ article[$route.params.index].author }}
 		.article-related
+			b 你或許還想看...
 			router-link(
 				:to="{ name: 'article', params: { index: item.index }}"
 				v-for="item in relateArticle"
@@ -14,7 +15,6 @@
 				ArticleBlock(
 					:imgAlt="item.imgAlt",
 					:title="item.title",
-					:subTitle="item.subTitle",
 					:imgSrc="item.imgSrc",
 					:author="item.author",
 					:publishData="item.publishData",
@@ -50,17 +50,27 @@ export default {
 }
 </script>
 <style lang="scss">
-.article-wrapper{
-	padding: 40px 0;
-	h2, h5{
-		margin: 10px 0;
+.article{
+	&-wrapper{
+		padding: 40px 0;
+		h2, h5{
+			margin: 10px 0 15px;
+		}
+		p{
+			margin-top: 29px; 
+		}
+		img{
+			max-width: 100%;
+			height: auto;
+		}
 	}
-	p{
-		margin-top: 29px; 
+	&-author{
+		margin-bottom: 19px;
 	}
-	img{
-		max-width: 100%;
-    height: auto;
+	&-related{
+		padding-top: 29px;
+		margin-top: 19px;
+		border-top: $article-border ; 
 	}
 }
 </style>

@@ -21,5 +21,8 @@ export default new Router({
       name: 'article',
       component: () => import('./views/article.vue')
     }
-  ]
+  ],
+  scrollBehavior (to, from) {
+    return { x: 0, y: 0 }
+  }
 })

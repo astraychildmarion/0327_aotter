@@ -18,9 +18,6 @@ export default {
     title: {
       type: String
     },
-    subtitle: {
-      type: String
-    },
     author: {
       type: String
     },
@@ -48,22 +45,22 @@ export default {
   overflow: hidden;
   transition: all .5s;
   .card-title{
-    color:#fff;
+    color:$card-title;
   }
   .card-text{
-    color: #eee;
+    color: $card-text;
     font-size: .8rem;
     font-weight: 400;
   }
   .article-tag{
-    background-color: rgba(#fff, 0.3);
-    border: 1px solid #ccc;
+    background-color: $article-tag-bg;
+    border: $article-tag-border;
     border-radius: 5px;
     padding: 5px 8px;
     width: fit-content;
   }
   &:hover{
-    box-shadow: 2px 2px 10px 3px #aaa;
+    box-shadow: $article-tag-shadow;
     transform: translateY(-5px);
     transition: all .5s;
   }

@@ -1,6 +1,6 @@
 <template lang="pug">
   .index-wrapper
-    IndexBanner()
+    IndexBanner
     router-link(
       v-for="item in article"
       key="index"
@@ -9,7 +9,6 @@
       ArticleBlock(
         :imgAlt="item.imgAlt",
         :title="item.title",
-        :subTitle="item.subTitle",
         :imgSrc="item.imgSrc",
         :author="item.author",
         :publishData="item.publishData",

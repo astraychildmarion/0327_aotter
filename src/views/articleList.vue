@@ -8,7 +8,6 @@
           ArticleBlock(
             :imgAlt="item.imgAlt",
             :title="item.title",
-            :subTitle="item.subTitle",
             :imgSrc="item.imgSrc",
             :author="item.author",
             :publishData="item.publishData",

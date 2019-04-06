@@ -13,10 +13,10 @@ export default {
 </script>
 <style lang="scss">
 .navbar{
-  background: #ee0979;  /* fallback for old browsers */
-  background: linear-gradient(to right, #ff6a00, #ee0979); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+  background: $gradient1;  /* fallback for old browsers */
+  background: linear-gradient(to right, $gradient2, $gradient1); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   a{
-    color: #fff;
+    color: $link-text-color;
   }
 }
 </style>

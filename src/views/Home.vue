@@ -4,7 +4,7 @@
     router-link(
       v-for="item in article"
       key="index"
-      :to="{ name: 'article', params: { index: item.index }}"
+      :to="{ name: 'BlogArticle', params: { index: item.index }}"
       ) 
       ArticleBlock(
         :imgAlt="item.imgAlt",

@@ -17,12 +17,12 @@ export default new Router({
       component: () => import('./views/articleList.vue')
     },
     {
-      path: '/article/:index',
-      name: 'article',
-      component: () => import('./views/article.vue')
+      path: '/BlogArticle/:index',
+      name: 'BlogArticle',
+      component: () => import('./views/BlogArticle.vue')
     }
   ],
-  scrollBehavior (to, from) {
+  scrollBehavior () {
     return { x: 0, y: 0 }
   }
 })

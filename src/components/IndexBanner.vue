@@ -2,7 +2,7 @@
 .banner-wrapper
   swiper(:options="swiperOption")
     swiperSlide(v-for="item in article" key="index")
-      router-link(:to="{ name: 'article', params: { index: item.index }}") 
+      router-link(:to="{ name: 'BlogArticle', params: { index: item.index }}") 
         img(:src="item.imgSrc")
   .swiper-pagination
 </template>

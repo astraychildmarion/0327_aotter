@@ -9,7 +9,7 @@
 		.article-related
 			b 你或許還想看...
 			router-link(
-				:to="{ name: 'article', params: { index: item.index }}"
+				:to="{ name: 'BlogArticle', params: { index: item.index }}"
 				v-for="item in relateArticle"
 				)
 				ArticleBlock(
@@ -30,7 +30,7 @@ import { firestore } from '../store'
 import ArticleBlock from '@/components/ArticleBlock.vue'
 
 export default {
-	name: 'article',
+	name: 'BlogArticle',
 	firestore () {
     return {
 			article: firestore.collection('article'),
@@ -43,7 +43,7 @@ export default {
 		relateArticle: function () {
 			let thisArticle = this.$route.params.index
 			let copyArticle = Object.assign([],this.article)
-		  copyArticle.splice(thisArticle,1)
+			copyArticle.splice(thisArticle,1)
 			return copyArticle
 		}
 	},
